@@ -270,8 +270,8 @@ describe("schema", () => {
         assertSchema("string-literals-inline", "MyObject");
     });
 
-    describe('custom dates', () => {
-        assertSchema('custom-dates', 'foo.Bar');
+    describe("custom dates", () => {
+        assertSchema("custom-dates", "foo.Bar");
     });
 
     describe("dates", () => {
