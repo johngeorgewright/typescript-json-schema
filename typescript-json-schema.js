@@ -683,7 +683,7 @@ var JsonSchemaGenerator = (function () {
         }
         var returnedDefinition = definition;
         var symbol = typ.getSymbol();
-        var isRawType = (!symbol || (symbol.name === "Date" && (symbol.flags & ts.TypeFlags["Intrinsic"])) || symbol.name === "integer" || this.tc.getIndexInfoOfType(typ, ts.IndexKind.Number) !== undefined);
+        var isRawType = (!symbol || this.tc.getFullyQualifiedName(symbol) === "Date" || symbol.name === "integer" || this.tc.getIndexInfoOfType(typ, ts.IndexKind.Number) !== undefined);
         var isStringEnum = false;
         if (typ.flags & ts.TypeFlags.Union) {
             var unionType = typ;
